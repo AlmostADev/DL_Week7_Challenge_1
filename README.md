@@ -8,9 +8,9 @@
 
 - Luego de pusheados los últimos cambios, sube el link de Github en el desafío de la sección correspondiente en la plataforma.
 
-## Ejercicio 1: Sintaxis básica
+## Ejercicio 1: Sintaxis básica :white_check_mark:
     
-1. Dado el siguiente hash:
+1. Dado el siguiente hash: :ballot_box_with_check:
 
     ~~~
     h = { :claveuno => 10, :clavedos => 20, :clavetres => 30 }
@@ -18,8 +18,8 @@
 
     Modificar el hash para utilizar la sintaxis de Ruby 2.0+
 
-## Ejercicio 2: Corrección de errores
-1. Se tiene el siguiente hash:
+## Ejercicio 2: Corrección de errores :white_check_mark:
+1. Se tiene el siguiente hash: :ballot_box_with_check:
 
     ~~~
     productos = {'bebida' => 850, 'chocolate' => 1200, 'galletas' => 900, 'leche' => 750}
@@ -33,7 +33,7 @@
 
     Corrige el error para mostrar la información solicitada.
 
-2. Se quiere agregar un nuevo producto al hash:
+2. Se quiere agregar un nuevo producto al hash: :ballot_box_with_check:
 
     ~~~
     producto[2200] = cereal
@@ -41,7 +41,7 @@
     
 	Corrige la instrucción para agregar el producto.
 
-3. Se quiere actualizar el precio de la bebida:
+3. Se quiere actualizar el precio de la bebida: :ballot_box_with_check:
 
 	~~~
    producto[:bebida] = 2000
@@ -49,9 +49,9 @@
     
     Corrige la instrucción para actualizar el valor del producto existente.
 
-4. Convertir el hash en un array y guardarlo en una nueva variable.
+4. Convertir el hash en un array y guardarlo en una nueva variable. :ballot_box_with_check:
 
-5. Eliminar el producto 'galletas' del hash.
+5. Eliminar el producto 'galletas' del hash. :ballot_box_with_check:
 
 ## Ejercicio 3: Operaciones básicas
 

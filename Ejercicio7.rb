@@ -12,7 +12,7 @@ loop do
     opc = gets.chomp.to_i
     case opc
         # 1 Si el usuario ingresa 1, podrá agregar un item y su stock en un solo string
-        when 1
+        when 1 Listo
             puts "Ingresa el nombre del item"
             key = gets.chomp
             puts "Ingresa el valor del item"
@@ -49,14 +49,14 @@ loop do
                     puts "Actualizando Stock"
             end
         #4 Si el usuario ingresa 4, podrá ver el stock total (suma del stock de cada item) que hay en el negocio.
-        when 4
+        when 4 Listo
             puts "El stock total del inventario es de #{inventario.each_value.sum} unidades"
         #5 Si el usuario ingresa 5, podrá ver el ítem que tiene la mayor cantidad de stock.
-        when 5
+        when 5 Listo
             max_stock = inventario.key(inventario.values.max)
             puts "El item de mayor stock es... #{max_stock}"
         #6 Si el usuario ingresa 6 podrá ingresar y preguntarle al sistema si un item existe en
-        when 6
+        when 6 Listo
             puts "Asking to system :o ..."
             puts "Ingresa el nombre del producto"
             key = gets.chomp
@@ -66,8 +66,8 @@ loop do
                 puts "no"
             end
         #7 El programa debe repertirse hasta que el usuario ingrese 7 (salir).
-        when 7
-            puts "Quiting :( ..."
+        when 7 Listo
+            puts "Shutdown Inventory Program :( ..."
         break
     end
 end

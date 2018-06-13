@@ -77,7 +77,7 @@ h = {"x": 1, "y":2}
     x = {"hola": "a"}
     ~~~
 
-## Ejercicio 4: Array y Hashes
+## Ejercicio 4: Array y Hashes :white_check_mark:
 
 Se tienen dos arrays uno con el nombre de personas y otro con las edades, se pide generar un hash con el nombre y edad de cada persona (se asume que no existen dos personas con el mismo nombre)
 
@@ -86,15 +86,15 @@ personas = ["Carolina", "Alejandro", "Maria Jesús", "Valentín"]
 edades = [32, 28, 41, 19]
 ~~~
 
-1. Se pide generar un hash con la información:
+1. Se pide generar un hash con la información: :ballot_box_with_check:
 
 	~~~ruby
 	personas_hash = {"Carolina": 32, "Alejandro":28, "María Jesús":41, "Valentín":19}
 	~~~
 
-2. Crear un método que reciba el hash y devuelva el promedio de las edades del hash pasado como argumento.
+2. Crear un método que reciba el hash y devuelva el promedio de las edades del hash pasado como argumento. :ballot_box_with_check:
 
-## Ejercicio 5: Array y Hashes
+## Ejercicio 5: Array y Hashes :white_check_mark:
 
 Dados los siguientes array:
 
@@ -103,7 +103,7 @@ meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo']
 ventas = [2000, 3000, 1000, 5000, 4000]
 ~~~
 
-Generar un hash que contenga los meses como llave y las ventas como valor:
+Generar un hash que contenga los meses como llave y las ventas como valor: :ballot_box_with_check:
 
 ~~~ruby
 h = {'Enero': 2000, 'Febrero': 3000 ... }
@@ -111,23 +111,23 @@ h = {'Enero': 2000, 'Febrero': 3000 ... }
 
 En base al hash generado:
 
-1.  Invertir las llaves y los valores del hash.
-2.  Obtener el mes mayor cantidad de ventas (a partir del hash invertido.)
+1.  Invertir las llaves y los valores del hash. :ballot_box_with_check:
+2.  Obtener el mes mayor cantidad de ventas (a partir del hash invertido.) :ballot_box_with_check:
 
-## Ejercicio 6: Operaciones típicas sobre un hash
+## Ejercicio 6: Operaciones típicas sobre un hash :white_check_mark:
 Escribir un hash con el menu de un restaurant, la llave es el nombre del plato y el valor es el precio de este.
 
 ~~~rb
 restaurant_menu = { "Ramen" => 3, "Dal Makhani" => 4, "Coffee" => 2 }
 ~~~
 
-1. Obtener el plato mas caro.
-2. Obtener el plato mas barato.
-3. Sacar el promedio del valor de los platos.
-4. Crear un arreglo con solo los nombres de los platos.
-5. Crear un arreglo con solo los valores de los platos.
-6. Modificar el hash y agregar el IVA a los valores de los platos (multiplicar por 1.19).
-7. Dar descuento del 20% para los platos que tengan un nombre de más 1 una palabra.
+1. Obtener el plato mas caro. :ballot_box_with_check:
+2. Obtener el plato mas barato. :ballot_box_with_check:
+3. Sacar el promedio del valor de los platos. :ballot_box_with_check:
+4. Crear un arreglo con solo los nombres de los platos. :ballot_box_with_check:
+5. Crear un arreglo con solo los valores de los platos. :ballot_box_with_check:
+6. Modificar el hash y agregar el IVA a los valores de los platos (multiplicar por 1.19). :ballot_box_with_check:
+7. Dar descuento del 20% para los platos que tengan un nombre de más 1 una palabra. :ballot_box_with_check:
 
 ## Ejercicio 7: Ejercicio completo con un hash
 

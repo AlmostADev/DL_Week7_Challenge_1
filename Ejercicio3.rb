@@ -6,7 +6,7 @@ h.store("z", 3)
 puts h
 
 #2 Cambiar el valor de x por 5
-h['x'] = 5
+h[:x] = 5
 puts h
 
 #3 Eliminar la clave y
@@ -21,8 +21,4 @@ else
 end
 
 #5 Invertir el diccionario de forma que los valores sean las llaves y las llaves los valores
-# Ejemplo:
-# x = {"a": "hola" }
-# Se transforme en:
-# x = {"hola": "a"}
-h.invert
+puts h.invert

@@ -1,4 +1,3 @@
-require 'byebug'
 # Se tiene un hash con el inventario de un negocio de computadores.
 inventario = {"Notebooks": 4, "PC Escritorio": 6, "Routers": 10, "Impresoras": 6}
 
@@ -18,15 +17,26 @@ loop do
             key = gets.chomp
             puts "Ingresa el valor del item"
             value = gets.chomp.to_i
-            inventario[key] = value
+            inventario.store(key, value)
+            puts "Se ha agregado un #{key} con valor #{value} al inventario"
+            puts "El inventario se ha actualizado..."
             puts inventario
-            puts "Tu inventario ha sido actualizado"
         #2 Si el usuario ingresa 2, podrá eliminar un item.
-        when 2
-            puts "Ingresa el nombre del producto"
-            key = gets.chomp
-            inventario.delete(key)
-            puts inventario
+        when 2 Listo
+            if inventario.length != 0
+                puts "Ingresa el nombre del producto"
+                key = gets.chomp
+                key_delete = inventario.delete(key.to_sym)
+                puts "Se ha eliminado #{key} del inventario"
+                if inventario.length != 0
+                  puts "El inventario se ha actualizado..."
+                else
+                  puts "El inventario ha quedado vacio"
+                end
+                puts inventario if inventario.length != 0
+            else
+                puts "Inventario vacío"
+            end
         #3 Si el usuario ingresa 3, puede actualizar la información almacenada (item y stock).
         when 3
             puts "Actualizando un item..."
@@ -40,11 +50,11 @@ loop do
             end
         #4 Si el usuario ingresa 4, podrá ver el stock total (suma del stock de cada item) que hay en el negocio.
         when 4
-            puts inventario
+            puts "El stock total del inventario es de #{inventario.each_value.sum} unidades"
         #5 Si el usuario ingresa 5, podrá ver el ítem que tiene la mayor cantidad de stock.
         when 5
             max_stock = inventario.key(inventario.values.max)
-            puts "Item mayor stock es... #{max_stock}"
+            puts "El item de mayor stock es... #{max_stock}"
         #6 Si el usuario ingresa 6 podrá ingresar y preguntarle al sistema si un item existe en
         when 6
             puts "Asking to system :o ..."

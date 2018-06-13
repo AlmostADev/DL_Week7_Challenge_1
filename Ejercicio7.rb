@@ -23,23 +23,21 @@ loop do
             puts "Tu inventario ha sido actualizado"
         #2 Si el usuario ingresa 2, podrá eliminar un item.
         when 2
-            puts "1. Por nombre \n2. Por valor"
-            opc2 = gets.chomp.to_i
-            case
-                when opc2 = 1
-                    puts "Ingresa el nombre del producto"
-                    key = gets.chomp
-                    inventario.delete(key)
-                    puts inventario
-                when opc2 = 2
-                    puts "Ingresa el valor del producto"
-                    value = gets.chomp.to_i
-                    inventario.delete(value)
-                    puts inventario
-            end
+            puts "Ingresa el nombre del producto"
+            key = gets.chomp
+            inventario.delete(key)
+            puts inventario
         #3 Si el usuario ingresa 3, puede actualizar la información almacenada (item y stock).
         when 3
             puts "Actualizando un item..."
+            puts "1. Actualizar Item \n2. Actualizar Stock \n"
+            opc1 = gets.chomp.to_i
+            case opc1
+                when 1
+                    puts "Actualizando Item"
+                when 2
+                    puts "Actualizando Stock"
+            end
         #4 Si el usuario ingresa 4, podrá ver el stock total (suma del stock de cada item) que hay en el negocio.
         when 4
             puts inventario
@@ -50,25 +48,12 @@ loop do
         #6 Si el usuario ingresa 6 podrá ingresar y preguntarle al sistema si un item existe en
         when 6
             puts "Asking to system :o ..."
-            puts "1. Buscar por nombre \n2. Buscar por valor"
-            opc3 = gets.chomp.to_i
-            case
-                when 1
-                    puts "Ingresa el nombre del producto"
-                    key = gets.chomp
-                    if inventario[key.to_sym]
-                        puts "si"
-                    else
-                        puts "no"
-                    end
-                when 2
-                    puts "Ingresa el valor del producto"
-                    value = gets.chomp.to_i
-                    if inventario.value(value)
-                        puts "si"
-                    else
-                        puts "no"
-                    end
+            puts "Ingresa el nombre del producto"
+            key = gets.chomp
+            if inventario[key.to_sym]
+                puts "si"
+            else
+                puts "no"
             end
         #7 El programa debe repertirse hasta que el usuario ingrese 7 (salir).
         when 7

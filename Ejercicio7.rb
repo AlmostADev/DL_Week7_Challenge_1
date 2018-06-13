@@ -1,3 +1,4 @@
+require 'byebug'
 # Se tiene un hash con el inventario de un negocio de computadores.
 inventario = {"Notebooks": 4, "PC Escritorio": 6, "Routers": 10, "Impresoras": 6}
 
@@ -12,7 +13,7 @@ loop do
     opc = gets.chomp.to_i
     case opc
         # 1 Si el usuario ingresa 1, podrá agregar un item y su stock en un solo string
-        when opc = 1
+        when 1
             puts "Ingresa el nombre del item"
             key = gets.chomp
             puts "Ingresa el valor del item"
@@ -21,7 +22,7 @@ loop do
             puts inventario
             puts "Tu inventario ha sido actualizado"
         #2 Si el usuario ingresa 2, podrá eliminar un item.
-        when opc = 2
+        when 2
             puts "1. Por nombre \n2. Por valor"
             opc2 = gets.chomp.to_i
             case
@@ -37,30 +38,30 @@ loop do
                     puts inventario
             end
         #3 Si el usuario ingresa 3, puede actualizar la información almacenada (item y stock).
-        when opc = 3
+        when 3
             puts "Actualizando un item..."
         #4 Si el usuario ingresa 4, podrá ver el stock total (suma del stock de cada item) que hay en el negocio.
-        when opc = 4
+        when 4
             puts inventario
         #5 Si el usuario ingresa 5, podrá ver el ítem que tiene la mayor cantidad de stock.
-        when opc = 5
+        when 5
             max_stock = inventario.key(inventario.values.max)
             puts "Item mayor stock es... #{max_stock}"
         #6 Si el usuario ingresa 6 podrá ingresar y preguntarle al sistema si un item existe en
-        when opc = 6
+        when 6
             puts "Asking to system :o ..."
             puts "1. Buscar por nombre \n2. Buscar por valor"
             opc3 = gets.chomp.to_i
             case
-                when opc3 = 1
+                when 1
                     puts "Ingresa el nombre del producto"
                     key = gets.chomp
-                    if inventario.key(key)
+                    if inventario[key.to_sym]
                         puts "si"
                     else
                         puts "no"
                     end
-                when opc3 = 2
+                when 2
                     puts "Ingresa el valor del producto"
                     value = gets.chomp.to_i
                     if inventario.value(value)
@@ -70,7 +71,7 @@ loop do
                     end
             end
         #7 El programa debe repertirse hasta que el usuario ingrese 7 (salir).
-        when opc = 7
+        when 7
             puts "Quiting :( ..."
         break
     end

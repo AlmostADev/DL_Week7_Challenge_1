@@ -12,7 +12,7 @@ puts merge_hash
 
 # 2 Crear un método que reciba el hash y devuelva la edad del hash pasado como argumento
 def hashBirth(hash)
-    puts hash.values
+    puts hash.values.sum / hash.length
 end
 
 hashBirth(merge_hash)

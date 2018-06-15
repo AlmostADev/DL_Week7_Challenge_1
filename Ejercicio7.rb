@@ -39,14 +39,20 @@ loop do
             end
         #3 Si el usuario ingresa 3, puede actualizar la información almacenada (item y stock).
         when 3
-            puts "Actualizando un item..."
-            puts "1. Actualizar Item \n2. Actualizar Stock \n"
-            opc1 = gets.chomp.to_i
-            case opc1
-                when 1
-                    puts "Actualizando Item"
-                when 2
-                    puts "Actualizando Stock"
+            loop do
+                puts "Ingrese nombre de elemento a modificar"
+                old_key = gets.chomp.to_sym
+                if inventario.has_key?(old_key)
+                puts "Ingrese nuevo nombre para el elemento"
+                new_key = gets.chomp.to_sym
+                puts "Ingrese un nuevo valor para el elemento"
+                new_value = gets.chomp.to_i
+                puts "Nuevo elemento #{new_key} : #{new_value}"
+                puts "Inventario actualizado..."
+                break
+                else
+                    puts "El elemento no existe en el inventario, Intentalo nuevamente ;)"
+                end
             end
         #4 Si el usuario ingresa 4, podrá ver el stock total (suma del stock de cada item) que hay en el negocio.
         when 4 Listo

@@ -5,10 +5,10 @@ es el precio de este.
 restaurant_menu = { "Ramen" => 3, "Dal Makhani" => 4, "Coffee" => 2 }
 
 # 1 Obtener el plato mas caro
-puts restaurant_menu.key(4)
+puts restaurant_menu.max_by { |i, j| j }[0]
 
 # 2 Obtener el plato mas barato
-puts restaurant_menu.key(2)
+puts restaurant_menu.keys.min_by { |i, j| i }
 
 # 3 Sacar el promedio del valor de los platos
 arr = restaurant_menu.each_value.to_a

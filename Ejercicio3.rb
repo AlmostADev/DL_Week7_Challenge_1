@@ -14,7 +14,7 @@ h.delete(:y)
 puts h
 
 #4 Si el hash tiene una clave llamada z mostrar en pantalla "yeeah"
-if h.has_key?(:z)
+if h.has_key?("z")
     puts "yeeah"
 else
     puts "no yeeah"

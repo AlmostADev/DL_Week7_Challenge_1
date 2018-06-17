@@ -13,4 +13,4 @@ puts arr_sells
 puts arr_sells.invert
 
 #2.2 Obtener el mes mayor cantidad de ventas (a partir del hash invertido.)
-puts arr_sells.key 5000
+puts arr_sells.max_by { |i, j| j }[0]

@@ -1,30 +1,31 @@
 # Se tiene un hash con el inventario de un negocio de computadores.
 inventario = {"Notebooks": 4, "PC Escritorio": 6, "Routers": 10, "Impresoras": 6}
 
-puts inventario
+puts inventario, "\n"
 
 # Crear un menú de 4 opciones, es decir, el usuario puede ingresar 1 2 3 o 4 y según eso el programa realizará distintas funciones.
 puts "Bienvenido al Inventario de Desafio Latam..."
 
 loop do
-    puts "Elige una de las siguientes opciones: \n"
-    puts "1. Agregar un item \n2. Eliminar un item \n3. Actualizar item \n4. Ver stock total \n5. Item mayor stock \n6. Ask to system ;) \n7. Salir"
+    puts "Elige una de las siguientes opciones: ", "\n"
+    puts "1. Agregar un item \n2. Eliminar un item \n3. Actualizar item \n4. Ver stock total \n5. Item mayor stock \n6. Ask to system ;) \n7. Salir", "\n"
     opc = gets.chomp.to_i
     case opc
         # 1 Si el usuario ingresa 1, podrá agregar un item y su stock en un solo string
-        when 1 Listo
+        when 1 #Listo
             puts "Ingresa el nombre del item"
-            key = gets.chomp
+            key = gets.chomp.to_sym
             puts "Ingresa el valor del item"
             value = gets.chomp.to_i
             inventario.store(key, value)
             puts "Se ha agregado un #{key} con valor #{value} al inventario"
-            puts "El inventario se ha actualizado..."
-            puts inventario
+            puts "El inventario se ha actualizado...", "\n"
+            puts inventario, "\n"
         #2 Si el usuario ingresa 2, podrá eliminar un item.
-        when 2 Listo
+        when 2 #Listo
             if inventario.length != 0
-                puts "Ingresa el nombre del producto"
+                puts "Ingresa el nombre del producto a eliminar"
+                puts inventario
                 key = gets.chomp
                 key_delete = inventario.delete(key.to_sym)
                 puts "Se ha eliminado #{key} del inventario"
@@ -38,31 +39,21 @@ loop do
                 puts "Inventario vacío"
             end
         #3 Si el usuario ingresa 3, puede actualizar la información almacenada (item y stock).
-        when 3
-            loop do
-                puts "Ingrese nombre de elemento a modificar"
-                old_key = gets.chomp.to_sym
-                if inventario.has_key?(old_key)
-                puts "Ingrese nuevo nombre para el elemento"
-                new_key = gets.chomp.to_sym
-                puts "Ingrese un nuevo valor para el elemento"
-                new_value = gets.chomp.to_i
-                puts "Nuevo elemento #{new_key} : #{new_value}"
-                puts "Inventario actualizado..."
-                break
-                else
-                    puts "El elemento no existe en el inventario, Intentalo nuevamente ;)"
-                end
-            end
+        when 3 #Listo
+            print inventario, "\n"
+            puts "Ingrese nombre de elemento a modificar"
+            up_ele = gets.chomp.split
+            inventario[up_ele] = update_stock.to_i
+            #puts "El elemento no existe en el inventario, Intentalo nuevamente ;)"
         #4 Si el usuario ingresa 4, podrá ver el stock total (suma del stock de cada item) que hay en el negocio.
-        when 4 Listo
+        when 4 #Listo
             puts "El stock total del inventario es de #{inventario.each_value.sum} unidades"
         #5 Si el usuario ingresa 5, podrá ver el ítem que tiene la mayor cantidad de stock.
-        when 5 Listo
+        when 5 #Listo
             max_stock = inventario.key(inventario.values.max)
             puts "El item de mayor stock es... #{max_stock}"
         #6 Si el usuario ingresa 6 podrá ingresar y preguntarle al sistema si un item existe en
-        when 6 Listo
+        when 6 #Listo
             puts "Asking to system :o ..."
             puts "Ingresa el nombre del producto"
             key = gets.chomp
@@ -72,7 +63,7 @@ loop do
                 puts "no"
             end
         #7 El programa debe repertirse hasta que el usuario ingrese 7 (salir).
-        when 7 Listo
+        when 7 #Listo
             puts "Shutdown Inventory Program :( ..."
         break
     end

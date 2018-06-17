@@ -129,7 +129,7 @@ restaurant_menu = { "Ramen" => 3, "Dal Makhani" => 4, "Coffee" => 2 }
 6. Modificar el hash y agregar el IVA a los valores de los platos (multiplicar por 1.19). :ballot_box_with_check:
 7. Dar descuento del 20% para los platos que tengan un nombre de más 1 una palabra. :ballot_box_with_check:
 
-## Ejercicio 7: Ejercicio completo con un hash
+## Ejercicio 7: Ejercicio completo con un hash :white_check_mark:
 
 Se tiene un hash con el inventario de un negocio de computadores.
 
@@ -139,19 +139,19 @@ inventario = {"Notebooks": 4, "PC Escritorio": 6, "Routers": 10, "Impresoras": 6
 
 Se pide:
 
-- Crear un menú de 4 opciones, es decir, el usuario puede ingresar 1 2 3 o 4 y según eso el programa realizará distintas funciones.
+- Crear un menú de 4 opciones, es decir, el usuario puede ingresar 1 2 3 o 4 y según eso el programa realizará distintas funciones. :ballot_box_with_check:
 
-- Si el usuario ingresa 1, podrá **agregar** un item y su stock en un solo string y agregarlo al hash. Para separar el nombre del stock el usuario debe utilizar una coma.
+- Si el usuario ingresa 1, podrá **agregar** un item y su stock en un solo string y agregarlo al hash. Para separar el nombre del stock el usuario debe utilizar una coma. :ballot_box_with_check:
 	- Ejemplo del input: "Pendrives, 100"
 
-- Si el usuario ingresa 2, **podrá eliminar** un item.
+- Si el usuario ingresa 2, **podrá eliminar** un item. :ballot_box_with_check: :ballot_box_with_check:
 
-- Si el usuario ingresa 3, puede **actualizar** la información almacenada (item y stock).
+- Si el usuario ingresa 3, puede **actualizar** la información almacenada (item y stock). :ballot_box_with_check:
 
-- Si el usuario ingresa 4, podrá ver el **stock total** (suma del stock de cada item) que hay en el negocio.
+- Si el usuario ingresa 4, podrá ver el **stock total** (suma del stock de cada item) que hay en el negocio. :ballot_box_with_check:
 
-- Si el usuario ingresa 5, podrá ver el **ítem que tiene la mayor cantidad de stock**.
+- Si el usuario ingresa 5, podrá ver el **ítem que tiene la mayor cantidad de stock**. :ballot_box_with_check:
 
-- Si el usuario ingresa 6 podrá ingresar y preguntarle al sistema si un item **existe en el inventario** o no. Por ejemplo, el usuario ingresará "Notebooks" y el programa responderá "Sí".
+- Si el usuario ingresa 6 podrá ingresar y preguntarle al sistema si un item **existe en el inventario** o no. Por ejemplo, el usuario ingresará "Notebooks" y el programa responderá "Sí". :ballot_box_with_check:
 
-- El programa debe repertirse hasta que el usuario ingrese 7 (salir).
+- El programa debe repertirse hasta que el usuario ingrese 7 (salir). :ballot_box_with_check:

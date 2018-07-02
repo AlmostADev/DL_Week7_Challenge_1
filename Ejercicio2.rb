@@ -18,7 +18,7 @@ puts productos
 
 # 4. Convertir el hash en un array y guardarlo en una nueva variable.
 hash_to_arr = productos.to_a
-print hash_to_arr
+puts hash_to_arr
 
 # 5. Eliminar el producto 'galletas' del hash.
 productos.delete("galletas")

@@ -43,7 +43,8 @@ loop do
             print inventario, "\n"
             puts "Ingrese nombre de elemento a modificar"
             up_ele = gets.chomp.split
-            inventario[up_ele] = update_stock.to_i
+            inventario[up_ele] = up_ele
+            print inventario
             #puts "El elemento no existe en el inventario, Intentalo nuevamente ;)"
         #4 Si el usuario ingresa 4, podrá ver el stock total (suma del stock de cada item) que hay en el negocio.
         when 4 #Listo
